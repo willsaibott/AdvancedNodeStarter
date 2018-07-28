@@ -4,7 +4,7 @@ let page;
 
 beforeEach(async () => {
   page = await Page.build();
-  await page.goto("localhost:3000");
+  await page.goto(page.root);
 });
 
 afterEach(async () => {
@@ -64,7 +64,7 @@ describe("When logged in", async () => {
       await page.waitFor(".card");
 
       const url = page.url();
-      expect(url).toEqual(`http://localhost:${page.port}/blogs`);
+      expect(url).toEqual(`${page.root}/blogs`);
 
 
       const title = await page.getInnerHtml(titleSelector);

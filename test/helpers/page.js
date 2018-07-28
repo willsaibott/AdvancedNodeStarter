@@ -25,6 +25,7 @@ class CustomPage {
   constructor(page) {
     this.page = page;
     this.port = port;
+    this.root = `http://localhost:${this.port}`;
   }
 
   async login() {
