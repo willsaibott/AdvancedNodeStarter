@@ -12,7 +12,6 @@ class CustomPage {
 
     const page = await browser.newPage();
     const customPage = new CustomPage(page);
-    this.port = port;
 
     return new Proxy(customPage, {
       get: function(target, property) {
@@ -25,6 +24,7 @@ class CustomPage {
 
   constructor(page) {
     this.page = page;
+    this.port = port;
   }
 
   async login() {
