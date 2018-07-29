@@ -10,7 +10,7 @@ class BlogShow extends Component {
   renderImage() {
     if (this.props.blog.imageUrl)
     {
-      return <img src={ `https://s3-sa-east-1.amazonaws.com/advanced-node-stater/${this.props.blog.imageUrl}` } />;
+      return <img alt="User Avatar" src={ `https://s3-sa-east-1.amazonaws.com/advanced-node-stater/${this.props.blog.imageUrl}` } />;
     }
   }
 
